@@ -1,0 +1,275 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+root {
+  background-color: #ffffff;
+}
+body {
+}
+section {
+  padding: 165px 10%;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid blue; */ /* Removed */
+  display: flex;
+  gap: 0; /* Remove gap */
+  align-items: stretch; /* Stretch items to fill the container */
+  height: 800px; /* Make the section full viewport height */
+  padding: 0; /* Remove padding */
+}
+
+.container {
+  width: 33.33%;
+  height: 100%; /* This ensures full height */
+}
+
+.container-1 {
+  background-color: #000000; /* Example color */
+}
+
+.container-image {
+  background-image: url("../assets/desktop/image-hero@2x.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container-3 {
+  background-color: #ffffff;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 165px 10%;
+}
+
+.hero-header {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.hero-header::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
+.hero-header h1 {
+  display: block;
+  text-wrap: nowrap;
+  line-height: 0.9; /* Reduce line height */
+  margin: 0; /* Remove default margins */
+}
+
+.hero-description {
+  width: 33.33%;
+}
+
+.hero-description p {
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000; /* Adjust color as needed */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mid-top-container,
+.mid-bottom-container {
+  display: flex;
+  align-items: center;
+}
+
+.mid-top-container {
+  /* border: 1px solid red; */ /* Removed */
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.mid-top-container-text {
+  width: 40%;
+  height: 100%;
+  margin-right: 30px;
+  /* border: 1px solid green; */ /* Removed */
+}
+
+.mid-top-container-image {
+  width: 60%;
+  height: 100%;
+  background-image: url("../assets/desktop/image-grid-1@2x.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.mid-bottom-container {
+  height: 800px;
+  /* border: 1px solid red; */ /* Removed */
+}
+.mid-bottom-container-left-image {
+  width: 55%;
+  height: 100%;
+  background-image: url("../assets/desktop/image-grid-2@2x.jpg");
+  background-size: cover;
+  background-position: bottom;
+  margin-right: 30px;
+}
+/* #gallery2-image {
+  width: 635px;
+  height: 720px;
+  object-fit: cover;
+} */
+
+.mid-bottom-container-right {
+  /* border: 1px solid blue; */ /* Removed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+}
+.mid-bottom-container-right-image {
+  /* border: 1px solid green; */ /* Removed */
+  width: 100%;
+  height: 50%;
+  background-image: url("../assets/desktop/image-grid-3@2x.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.mid-bottom-container-right-text {
+  width: 100%;
+  height: 50%;
+  line-height: 0.9; /* Reduce line height */
+  margin: 0; /* Remove default margins */
+  background-color: black;
+  color: white;
+  padding: 5% 10%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 5% 10%;
+  background-color: black;
+  color: white;
+}
+
+footer span {
+  width: 50%;
+  text-wrap: balance;
+  margin-inline-start: 0;
+}
+
+footer img {
+  width: 150px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 16px;
+  height: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 88px;
+}
+
+h2 {
+  font-size: 70px;
+  line-height: 70px;
+  text-wrap: balance;
+  margin-block-end: 0.4em;
+}
+
+.mid-bottom-container-right-text h2 {
+  margin-block-start: 0.6em;
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 50px;
+}
+
+h4 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+p,
+span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.small-text {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@media screen and (min-width: 1501px) {
+  section,
+  .hero-content,
+  footer {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
