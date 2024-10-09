@@ -303,12 +303,11 @@ span {
   .hero {
     position: relative;
     overflow: hidden;
-    /* border: 1px solid blue; */ /* Removed */
     display: flex;
-    gap: 0; /* Remove gap */
-    align-items: stretch; /* Stretch items to fill the container */
-    height: 800px; /* Make the section full viewport height */
-    padding: 0; /* Remove padding */
+    gap: 0;
+    align-items: stretch;
+    height: 800px;
+    padding: 0;
   }
 
   .container {
@@ -397,5 +396,62 @@ span {
   .cta-button {
     font-size: 20px;
     line-height: normal;
+  }
+}
+
+/* ------------Mobile -------------*/
+@media screen and (max-width: 750px) {
+  .hero,
+  .hero > *,
+  .mid-top-container,
+  .mid-bottom-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+  .hero {
+    position: relative;
+  }
+  .container-1,
+  .container-3 {
+    display: none;
+  }
+
+  .container-image {
+    width: 100%;
+  }
+
+  .hero-content {
+    width: 100%;
+    position: relative;
+    padding: 48px 5%;
+    justify-content: center;
+  }
+
+  .hero-header {
+    width: 100%;
+    position: relative;
+    color: #000000;
+    mix-blend-mode: normal;
+    text-align: left;
+  }
+
+  .hero-description {
+    width: 100%;
+    text-align: left;
+  }
+
+  .mid-top-container > *,
+  .mid-bottom-container > * {
+    width: 100%;
+    margin: 0;
+  }
+  .mid-top-container {
+    flex-direction: column-reverse;
+    height: 600px;
+    margin-bottom: 30px;
   }
 }
