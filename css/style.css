@@ -299,6 +299,16 @@ span {
 }
 
 /* ------- Tablet ------- */
+/* For screens between 751px and 1500px
+ * 
+ * Key changes in this breakpoint:
+ * - Hero section layout adjusts to 2 columns
+ * - First container is hidden
+ * - Typography sizes are reduced
+ * - Image sizes and paths are updated for tablet
+ * - Spacing and padding are adjusted for tablet view
+ */
+
 @media screen and (min-width: 751px) and (max-width: 1500px) {
   .hero {
     position: relative;
@@ -321,7 +331,7 @@ span {
 
   .container-image {
     width: 60%;
-    background-image: url("../assets/desktop/image-hero@2x.jpg");
+    background-image: url("../assets/tablet/image-hero@2x.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -453,5 +463,86 @@ span {
     flex-direction: column-reverse;
     height: 600px;
     margin-bottom: 30px;
+  }
+
+  .mid-top-container-text {
+    height: min-content;
+  }
+
+  .mid-bottom-container {
+    height: 900px;
+  }
+
+  .mid-bottom-container-right {
+    height: 1200px;
+  }
+
+  .mid-bottom-container-left-image,
+  .mid-bottom-container-right-image {
+    margin-bottom: 16px;
+  }
+
+  .mid-bottom-container-right-text {
+    height: 65%;
+  }
+
+  footer {
+    display: block;
+    padding: 48px, 32px;
+    background-color: black;
+    color: white;
+  }
+
+  footer span {
+    width: 50%;
+    text-wrap: balance;
+    margin-inline-start: 0;
+  }
+
+  footer img {
+    width: 150px;
+    margin-bottom: 38px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 16px;
+    height: 16px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 55px;
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  p,
+  span {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .small-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .cta-button {
+    font-size: 20px;
+    line-height: normal;
   }
 }
