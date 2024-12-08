@@ -343,20 +343,24 @@ span {
   .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: left;
+    padding-bottom: 0;
+    height: 100%;
   }
 
   .hero-header {
     grid-column: 2;
+    align-self: end;
     width: fit-content;
     position: relative;
     color: #000000;
     mix-blend-mode: normal;
     text-align: left;
+    margin-bottom: 0;
   }
 
   .hero-description {
     grid-column: 2;
+    align-self: start;
     width: 100%;
     text-align: left;
   }
@@ -432,6 +436,8 @@ span {
 
   .container-image {
     width: 100%;
+    background-image: url("../assets/mobile/image-hero@2x.jpg");
+    background-size: cover;
   }
 
   .hero-content {
